@@ -4,7 +4,7 @@ import {add, format} from 'date-fns';
 
 import {IAds} from '@type/models/management';
 
-const BASE_URL = 'http://localhost:3001';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export const getReport = (date: Date) => getDataByDate(date, 'daily');
 export const getChannel = (date: Date) => getDataByDate(date, 'channels');
